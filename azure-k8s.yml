@@ -21,7 +21,7 @@ steps:
     command: 'init'
     workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
     backendType: 'azurerm'
-    backendServiceArm: 'azure-rm-service-connection'
+    backendServiceArm: 'azure-tm-service-connection'
     ensureBackend: true
     backendAzureRmResourceGroupName: 'terraform-backend-rg'
     backendAzureRmResourceGroupLocation: 'westeurope'
