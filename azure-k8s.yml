@@ -25,8 +25,8 @@ steps:
     ensureBackend: true
     backendAzureRmResourceGroupName: 'terraform-backend-rg'
     backendAzureRmResourceGroupLocation: 'westeurope'
-    backendAzureRmStorageAccountName: 'storageaccountnameseawalsh'
-    backendAzureRmContainerName: 'storageaccountnameseawalshcontainer'
+    backendAzureRmStorageAccountName: 'storageseawalsh'
+    backendAzureRmContainerName: 'storageseawalshcontainer'
     backendAzureRmKey: 'kubernetes-dev-tfstate'
     allowTelemetryCollection: true
 - task: TerraformCLI@0
