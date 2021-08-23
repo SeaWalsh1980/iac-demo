@@ -3,6 +3,12 @@ resource "azurerm_resource_group" "resource_group" {
   location = var.location
 }
 
+provider "azurerm" {
+  features {}
+
+  subscription_id ="bb6e0421-90fc-4ca4-bbb2-3502af0e59e1"
+}
+
 resource "azurerm_kubernetes_cluster" "terraform-k8s" {
   name                = "${var.cluster_name}_${var.environment}"
   location            = azurerm_resource_group.resource_group.location
@@ -30,5 +36,15 @@ resource "azurerm_kubernetes_cluster" "terraform-k8s" {
 
   tags = {
     Environment = var.environment
+  }
+}
+
+terraform {
+  backend "azurerm" {
+    tenant_id = "f577cd82-810c-43f9-a1f6-0cc532871050"
+    # storage_account_name="<<storage_account_name>>" #OVERRIDE in TERRAFORM init
+    # access_key="<<storage_account_key>>" #OVERRIDE in TERRAFORM init
+    # key="<<env_name.k8s.tfstate>>" #OVERRIDE in TERRAFORM init
+    # container_name="<<storage_account_container_name>>" #OVERRIDE in TERRAFORM init
   }
 }
