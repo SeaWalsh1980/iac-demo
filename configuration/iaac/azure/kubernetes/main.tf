@@ -42,6 +42,7 @@ resource "azurerm_kubernetes_cluster" "terraform-k8s" {
 
 terraform {
   backend "azurerm" {
+    tenant_id = "f577cd82-810c-43f9-a1f6-0cc532871050"
     # storage_account_name="<<storage_account_name>>" #OVERRIDE in TERRAFORM init
     # access_key="<<storage_account_key>>" #OVERRIDE in TERRAFORM init
     # key="<<env_name.k8s.tfstate>>" #OVERRIDE in TERRAFORM init
