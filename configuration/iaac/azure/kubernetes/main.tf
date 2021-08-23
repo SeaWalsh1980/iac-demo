@@ -6,7 +6,7 @@ resource "azurerm_resource_group" "resource_group" {
 provider "azurerm" {
   features {}
 
-  subscription_id ="bb6e0421-90fc-4ca4-bbb2-3502af0e59e1"
+  subscription_id ="f577cd82-810c-43f9-a1f6-0cc532871050"
 }
 
 resource "azurerm_kubernetes_cluster" "terraform-k8s" {
